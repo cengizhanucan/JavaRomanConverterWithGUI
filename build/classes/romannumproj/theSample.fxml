@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="995.0" prefWidth="1485.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="romannumproj.Controller">
+   <children>
+      <ImageView fitHeight="1023.0" fitWidth="1536.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="OVERLAY" fill="#ffffff14" height="711.0" layoutX="669.0" layoutY="45.0" stroke="#a6a6a697" strokeType="INSIDE" style="-fx-arc-height: 60; -fx-arc-width: 60;" width="470.0">
+         <effect>
+            <Blend />
+         </effect>
+      </Rectangle>
+      <VBox alignment="CENTER" layoutX="681.0" layoutY="24.0" prefHeight="253.0" prefWidth="450.0" spacing="10.0">
+         <children>
+            <Label alignment="CENTER" blendMode="HARD_LIGHT" prefHeight="74.0" prefWidth="483.0" style="-fx-border-color: rgb(180, 180, 180);" text="Roman Numeral Converter">
+               <font>
+                  <Font name="Times New Roman" size="39.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <Line endX="238.599853515625" startX="-100.0" />
+            <TextField fx:id="conversionTextField" alignment="CENTER" blendMode="COLOR_BURN" onKeyPressed="#numConversionforTxtField" prefHeight="34.0" prefWidth="257.0" promptText="Enter your Number Here" style="-fx-border-color: rgb(180, 180, 180); -fx-prompt-text-fill: rgb(90, 90, 90);">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </TextField>
+            <Label fx:id="alertLabel" alignment="CENTER" text="Please enter a value between 1 and 3999." textFill="#842626" visible="false">
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+         </children>
+      </VBox>
+      <Label fx:id="resultLabel" alignment="CENTER" blendMode="COLOR_BURN" layoutX="697.0" layoutY="431.0" prefHeight="38.0" prefWidth="395.0">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="578.0" fitWidth="212.0" layoutX="793.0" layoutY="246.0" opacity="0.44" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@column.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="convertButton" alignment="CENTER" layoutX="851.0" layoutY="282.0" mnemonicParsing="false" onAction="#numConversionforTxtField" prefHeight="33.0" prefWidth="95.0" text="Convert" visible="false">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="20.0" layoutY="31.0" text="Press ESC to exit.">
+         <font>
+            <Font name="Times New Roman" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
